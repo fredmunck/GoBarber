@@ -1,4 +1,4 @@
-import express from 'express';
+import express, { json } from 'express';
 import routes from './routes';
 
 class App {
@@ -10,7 +10,7 @@ class App {
   }
 
   middleware() {
-    this.server.use(json());
+    this.server.use(json()); // Na aula é usado 'express.json()', sem o 'import ... { json } ...
   }
 
   routes() {
